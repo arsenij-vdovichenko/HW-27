@@ -1,13 +1,17 @@
 .box{
-    width: 500px;
-    height: 300px;
+    width: 300px;
+    height: 500px;
     background-color: grey;
     position: fixed;
-    bottom: -250;
-    right: 0;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    
 }
 .box:hover{
-    left: 0;
+    transform: translateX(0);
     .title{
         visibility: hidden;
     }
@@ -23,11 +27,11 @@
     right: -80px;
     top: 220px;
 }
-/* .link{
+.list{
     color: white;
     font-size: 30px;
 }
-.link::before{
+.list::before{
     content: "";
     width: 20px;
     height: 20px;
@@ -35,36 +39,36 @@
     display: inline-flex;
     margin-right: 20px;
     transform: rotate(45deg);
-} */
+    
+}
 .list{
-    transform: rotate(270deg);
-    position: absolute;
-    bottom: 20px;
-    right: 200px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: 100px;
+    margin-left: 15px;
+    
 }
 
 .item{
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     text-transform: uppercase;
-    display: inline block;
-    margin-right: 10px;
-    transform: rotate(0);
-    transition-property: transform;
-    transition-duration: 2000ms;
+   
 }
 .item::before{
     content: "";
     width: 20px;
     height: 20px;
     background-color: orange;
+    display: inline block;
+    margin-right: 10px;
+    transform: rotate(0);
+    transition-property: transform;
+    transition-duration: 2000ms;
 }
 
-.item-hover:hover{
+.item:hover{
     color: orange;
 }
 
